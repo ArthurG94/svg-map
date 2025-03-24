@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carte GPS</title>
+	<link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+
+
+	<div class="config-col">
+		<div class="form-control">
+			<label for="svg-file-input">Fichier SVG fond</label>
+			<input type="file" name="" id="svg-file-input">
+		</div>
+		<div class="form-control">
+			<label for="radius-input">Rayon des points</label>
+			<input type="number" name="" id="radius-input" placeholder="10">
+		</div>
+		<div id="grid" class="ht-theme-main"></div>
+	</div>
+
+	<france-svg></france-svg>
+
+	<footer>
+		Fait avec ❤️ par Arthur G.
+	</footer>
+	<script type="module" src="js/app.ts"></script>
+</body>
+
+</html>

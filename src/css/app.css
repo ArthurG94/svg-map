@@ -1,0 +1,80 @@
+@import "npm:leaflet/dist/leaflet.css";
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: calc(100% - 20px - 2em) 20px;
+	grid-template-areas: 
+	"top-left top-right"
+	"footer footer"; 
+
+	align-items: center;
+
+	height: 100%;
+	padding: 2em;
+	padding-bottom: 0;
+	gap: 1em 2em;
+
+
+	font-size: 16px;
+	font-family: sans-serif;
+
+	background-color: #eeeeee;
+}
+
+france-svg{
+	border-radius: 1em;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+
+	height: 100%;
+	grid-area: top-right;
+}
+
+footer{
+	grid-area: footer;
+}
+
+input{
+	border-radius: 0.5em;
+	padding: 0.5em;
+	border: 1px solid #ddd;
+}
+
+#grid {
+	height: 100%;
+}
+
+.config-col {
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	border-radius: 1em;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+	padding: 1.5em;
+	grid-area: top-left;
+}
+
+
+.form-control{
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-bottom:1em;
+}
