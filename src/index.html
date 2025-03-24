@@ -12,14 +12,20 @@
 
 
 	<div class="config-col">
-		<div class="form-control">
-			<label for="svg-file-input">Fichier SVG fond</label>
-			<input type="file" name="" id="svg-file-input">
-		</div>
-		<div class="form-control">
-			<label for="radius-input">Rayon des points</label>
-			<input type="number" name="" id="radius-input" placeholder="10">
-		</div>
+		<form id="config-form">
+			<div class="form-control">
+				<label for="svg-file-input">Fichier SVG fond</label>
+				<input type="file" name="file">
+			</div>
+			<div class="form-control">
+				<label for="radius-input">Rayon des points</label>
+				<input type="number" name="radius" placeholder="10">
+			</div>
+			<div class="form-control">
+				<label for="radius-input">CSS point</label>
+				<input type="text" name="pointCss">
+			</div>
+		</form>
 		<div id="grid" class="ht-theme-main"></div>
 	</div>
 

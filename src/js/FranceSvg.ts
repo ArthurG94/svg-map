@@ -39,6 +39,9 @@ class FranceSvg extends LitElement {
 	@property()
 	public accessor radius: number = 10;
 
+	@property()
+	public accessor pointCss: string = ''
+
 	private circlesGroups: SVGGElement[];
 
 	public constructor() {
@@ -107,12 +110,10 @@ class FranceSvg extends LitElement {
 	public updated(_changedProperties: PropertyValues): void {
 		super.update(_changedProperties);
 		const containerRect = this.getBoundingClientRect();
-		console.log(containerRect);
-
 		const img = this.renderRoot.querySelector('img');
-		if(img){
-			img.style.setProperty('max-height', containerRect.height+'px')
-			img.style.setProperty('max-width', containerRect.width+'px')
+		if (img) {
+			img.style.setProperty('max-height', containerRect.height + 'px')
+			img.style.setProperty('max-width', containerRect.width + 'px')
 		}
 
 
@@ -146,6 +147,7 @@ class FranceSvg extends LitElement {
 					circle.setAttribute('cy', String(y));
 					circle.setAttribute('r', String(this.radius));
 					circle.setAttribute('title', point.label ?? '')
+					circle.setAttribute('style', this.pointCss)
 					circle.style.setProperty('fill', point.color);
 					return circle;
 
@@ -154,7 +156,7 @@ class FranceSvg extends LitElement {
 			});
 			this._svgElement.append(...this.circlesGroups)
 
-		
+
 			return html`<img class="map" src=${this.svgToDataUrl(this._svgElement)}>`
 		} else {
 			return '';
